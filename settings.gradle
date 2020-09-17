@@ -1,0 +1,4 @@
+include ':customview'
+include ':globalstyle'
+include ':app'
+rootProject.name = "Android"
