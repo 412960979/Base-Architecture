@@ -1,3 +1,4 @@
+include ':koltin-language'
 include ':customview'
 include ':globalstyle'
 include ':app'
