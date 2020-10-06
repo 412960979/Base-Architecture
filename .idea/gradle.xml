@@ -12,10 +12,11 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/customgloballoadingdialog" />
+            <option value="$PROJECT_DIR$/baselibrary" />
             <option value="$PROJECT_DIR$/customview" />
+            <option value="$PROJECT_DIR$/globalloadingdialog" />
             <option value="$PROJECT_DIR$/globalstyle" />
-            <option value="$PROJECT_DIR$/koltin-language" />
+            <option value="$PROJECT_DIR$/kotlin-language" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

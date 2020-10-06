@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="WNProgressWheel">
+        <attr name="wn_progressIndeterminate" format="boolean" />
+        <attr name="wn_barColor" format="color" />
+        <attr name="wn_rimColor" format="color" />
+        <attr name="wn_rimWidth" format="dimension" />
+        <attr name="wn_spinSpeed" format="float" />
+        <attr name="wn_barSpinCycleTime" format="integer" />
+        <attr name="wn_circleRadius" format="dimension" />
+        <attr name="wn_fillRadius" format="boolean" />
+        <attr name="wn_barWidth" format="dimension" />
+        <attr name="wn_linearProgress" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="WNCircularProgressBar">
+        <attr name="wn_progress" format="integer" />
+        <attr name="wn_progressbar_color" format="color" />
+        <attr name="wn_background_progressbar_color" format="color" />
+        <attr name="wn_progressbar_width" format="dimension" />
+        <attr name="wn_background_progressbar_width" format="dimension" />
+    </declare-styleable>
+
+</resources>

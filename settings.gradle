@@ -1,6 +1,7 @@
-include ':customgloballoadingdialog'
-include ':koltin-language'
+include ':baselibrary'
+include ':globalloadingdialog'
+include ':kotlin-language'
 include ':customview'
 include ':globalstyle'
 include ':app'
-rootProject.name = "Android"
+rootProject.name = "base-architecture"
