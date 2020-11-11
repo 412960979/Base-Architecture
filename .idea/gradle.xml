@@ -16,6 +16,7 @@
             <option value="$PROJECT_DIR$/customview" />
             <option value="$PROJECT_DIR$/globalloadingdialog" />
             <option value="$PROJECT_DIR$/globalstyle" />
+            <option value="$PROJECT_DIR$/jetpack-compose" />
             <option value="$PROJECT_DIR$/kotlin-language" />
           </set>
         </option>

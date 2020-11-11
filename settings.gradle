@@ -1,3 +1,4 @@
+include ':jetpack-compose'
 include ':baselibrary'
 include ':globalloadingdialog'
 include ':kotlin-language'
