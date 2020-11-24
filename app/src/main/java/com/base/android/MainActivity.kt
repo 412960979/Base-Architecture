@@ -3,6 +3,7 @@ package com.base.android
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.core.view.doOnPreDraw
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -13,5 +14,7 @@ class MainActivity : AppCompatActivity() {
         btnGlobalDialog.setOnClickListener {
             startActivity(Intent(this, GlobalDialogActivity::class.java))
         }
+
+        btnGlobalDialog.doOnPreDraw {  }
     }
 }
