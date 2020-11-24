@@ -1,4 +1,4 @@
-package com.base.koltin
+package com.base.koltin.coroutines
 
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay

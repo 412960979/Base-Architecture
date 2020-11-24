@@ -113,7 +113,7 @@ public class GlobalDialogActivity extends AppCompatActivity implements View.OnCl
                         .isCancelable(true)
                         .setProgressSize(30)
                         .setMinWidthAndHeight(50,50)
-                        .setPadding(16,16,16,16)
+                        .setPadding(16,16,16,16) 
                         //dialog动画
                         .setAnimationID(R.style.animate_dialog_custom)
                         .setOnDialogDismissListener(new OnDialogDismissListener() {
