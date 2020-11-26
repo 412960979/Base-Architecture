@@ -1,4 +1,4 @@
-package com.base.koltin.test;
+package com.base.koltin.demo;
 
 import android.content.Context;
 import android.widget.Button;

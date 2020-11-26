@@ -1,4 +1,4 @@
-package com.base.koltin.test
+package com.base.koltin.demo
 
 /**
  * out对应Java的协变，只读
