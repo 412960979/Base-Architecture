@@ -1,4 +1,4 @@
-package com.base.koltin.demo
+package com.base.koltin.demo.generic
 
 /**
  * out对应Java的协变，只读
@@ -22,7 +22,7 @@ class A(s: Int) : Production<String> {
 
 }
 
-class B(b: Int) : Consumer<Int>{
+class B(b: Int) : Consumer<Int> {
     override fun consume(item: Int) {
         println(item)
     }
