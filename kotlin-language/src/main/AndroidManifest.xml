@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Android">
-        <activity android:name="com.base.koltin.MainActivity">
+        <activity android:name="com.base.koltin.demo.screenadapter.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
