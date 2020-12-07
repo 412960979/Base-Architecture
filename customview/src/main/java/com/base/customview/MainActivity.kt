@@ -23,6 +23,9 @@ class MainActivity : AppCompatActivity() {
 
         endAnim()
 
+//         属性动画
+//        customView.animate().translationX(500f)
+        customView.translationX = 500f // 不是属性动画
     }
 
     private fun endAnim() {
