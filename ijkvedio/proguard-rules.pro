@@ -19,3 +19,13 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+#下面是直播(ijkplayer)相关的
+-keep class simijkplayer.**{
+    public <fields>;
+    public <methods>;
+}
+-keep class tv.danmaku.ijk.media.**{
+    <fields>;
+    <methods>;
+}
