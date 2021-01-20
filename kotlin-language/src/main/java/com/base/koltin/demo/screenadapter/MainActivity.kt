@@ -1,14 +1,19 @@
 package com.base.koltin.demo.screenadapter
 
+import android.animation.ObjectAnimator
 import android.graphics.Color
+import android.graphics.Paint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import com.base.koltin.R
+import com.base.koltin.demo.proxy.ApiService
+import com.base.koltin.demo.proxy.MyProxy
 import com.base.koltin.extensions.adapterScreen
 import com.base.koltin.extensions.resetScreen
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlin.concurrent.thread
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -54,9 +59,11 @@ class MainActivity : AppCompatActivity() {
     fun setAndroidNativeLightStatusBar(dark: Boolean) {
         val decor = window.decorView
         if (dark) {
-            decor.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
+            decor.systemUiVisibility =
+                View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
         } else {
-            decor.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+            decor.systemUiVisibility =
+                View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or View.SYSTEM_UI_FLAG_LAYOUT_STABLE
         }
     }
 }
