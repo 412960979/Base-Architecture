@@ -17,7 +17,7 @@ class A(s: Int) : Production<String> {
     constructor(s: Int, b: String) : this(s)
 
     override fun produce(): String {
-        return "test";
+        return "com.example.test";
     }
 
 }

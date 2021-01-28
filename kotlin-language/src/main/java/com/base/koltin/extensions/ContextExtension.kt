@@ -10,7 +10,7 @@ import kotlin.jvm.Throws
  * 显示打开Activity [A], 允许通过 [Intent] 配置跳转参数 [configIntent]
  * return [Unit]
  */
-inline fun <reified A : Activity>Context.start(configIntent: Intent.() -> Unit){
+inline fun <reified A : Activity>Context.start(configIntent: Intent.() -> Unit = {}){
     startActivity(Intent(this, A::class.java).apply {
         configIntent()
     })
@@ -22,7 +22,7 @@ inline fun <reified A : Activity>Context.start(configIntent: Intent.() -> Unit){
  * @return [Unit]
  */
 @Throws(ActivityNotFoundException::class)
-inline fun Context.start(action: String, configIntent: Intent.() -> Unit){
+inline fun Context.start(action: String, configIntent: Intent.() -> Unit = {}){
     startActivity(Intent(action).apply(configIntent))
 }
 

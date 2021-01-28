@@ -1,3 +1,4 @@
+include ':com.example.test'
 include ':plugin-hotfix'
 include ':ijkvedio'
 include ':jetpack-compose'
@@ -7,4 +8,5 @@ include ':kotlin-language'
 include ':customview'
 include ':globalstyle'
 include ':app'
+include ':test'
 rootProject.name = "base-architecture"

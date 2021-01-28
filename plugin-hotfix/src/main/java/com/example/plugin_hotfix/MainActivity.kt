@@ -6,6 +6,7 @@ import android.os.Handler
 import android.os.Looper
 import android.util.Log
 import android.widget.TextView
+import com.com.example.plugin_hotfix.R
 import kotlin.concurrent.thread
 
 class MainActivity : AppCompatActivity() {
@@ -17,19 +18,19 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         thread {
-            Log.i("test", "start")
+            Log.i("com.example.test", "start")
 
             Looper.prepare()
 
             mHandler = Handler() {
-                Log.i("test", "middle${it.what}")
+                Log.i("com.example.test", "middle${it.what}")
 
                 false
             }
 
             Looper.loop()
 
-            Log.i("test", "end")
+            Log.i("com.example.test", "end")
         }
 
         findViewById<TextView>(R.id.textView).setOnClickListener {

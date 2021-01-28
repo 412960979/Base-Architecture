@@ -2,16 +2,17 @@ package com.base.koltin.demo.screenadapter
 
 import android.animation.ObjectAnimator
 import android.graphics.Color
-import android.graphics.Paint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import com.base.koltin.R
+import com.base.koltin.demo.bus.Main1Activity
 import com.base.koltin.demo.proxy.ApiService
 import com.base.koltin.demo.proxy.MyProxy
 import com.base.koltin.extensions.adapterScreen
 import com.base.koltin.extensions.resetScreen
+import com.base.koltin.extensions.start
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlin.concurrent.thread
 
@@ -33,7 +34,11 @@ class MainActivity : AppCompatActivity() {
 //        2f.pow(10)
 
         rl_center.setOnClickListener {
-            Toast.makeText(this, "test toast 测试", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "com.example.test toast 测试", Toast.LENGTH_SHORT).show()
+        }
+
+        rl_bus.setOnClickListener {
+            start<Main1Activity>()
         }
     }
 

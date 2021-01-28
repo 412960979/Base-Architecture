@@ -3,6 +3,7 @@ plugins {
     id 'kotlin-android'
     id 'com.wn.hotfix'
     id 'com.wn.plugin'
+    id 'com.wn.version'
 }
 
 android {
@@ -10,13 +11,13 @@ android {
     buildToolsVersion "30.0.2"
 
     defaultConfig {
-        applicationId "com.example.plugin_hotfix"
+        applicationId "com.com.example.plugin_hotfix"
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.com.example.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
@@ -42,8 +43,8 @@ dependencies {
     implementation 'com.google.android.material:material:1.2.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     testImplementation 'junit:junit:4.+'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    androidTestImplementation 'androidx.com.example.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.com.example.test.espresso:espresso-core:3.3.0'
 }
 
 //===============获取dex文件========================

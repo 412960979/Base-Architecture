@@ -43,10 +43,20 @@
     </LinearLayout>
 
     <RelativeLayout
+        android:id="@+id/rl_bus"
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:layout_margin="20dp"
-        android:background="@android:color/holo_blue_dark" />
+        android:background="@android:color/holo_blue_dark" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LiveDataBus"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="20sp"/>
+    </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/rl_center"

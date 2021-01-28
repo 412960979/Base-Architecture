@@ -108,7 +108,7 @@ private fun testFixThreadPool() {
  * 如果线程池长度超过处理需要，可灵活回收空闲线程，若无可回收，则新建线程
  * CachedThreadPool适用于有大量需要立即执行的耗时少的任务的情况
  */
-private fun testCachedThreadPool(){
+private fun testCachedThreadPool() {
     threadPoolExecute {
         Executors.newCachedThreadPool()
     }
@@ -119,8 +119,8 @@ private fun testCachedThreadPool(){
  * 特点：
  * 创建一个单线程化的线程池，它只会用唯一的工作线程来执行任务，保证所有任务按照指定顺序(FIFO, LIFO, 优先级)执行
  */
-private fun testSingleThreadPool(){
-    threadPoolExecute{
+private fun testSingleThreadPool() {
+    threadPoolExecute {
         Executors.newSingleThreadExecutor()
     }
 }
@@ -130,7 +130,7 @@ private fun testSingleThreadPool(){
  * 特点：
  * 创建一个定长线程池，支持定时及周期性任务执行
  */
-private fun testScheduledThreadPool(){
+private fun testScheduledThreadPool() {
     val scheduledThreadPool = Executors.newScheduledThreadPool(corePoolSize)
 
     val runnable = Runnable {
@@ -142,37 +142,54 @@ private fun testScheduledThreadPool(){
     //延迟5s后启动，每1s执行一次
     // scheduledThreadPool.scheduleAtFixedRate(runnable,5,1,TimeUnit.SECONDS);
     //启动后第一次延迟5s执行，后面延迟1s执行
-     scheduledThreadPool.scheduleWithFixedDelay(runnable,0,2,TimeUnit.SECONDS);
+    scheduledThreadPool.scheduleWithFixedDelay(runnable, 0, 2, TimeUnit.SECONDS);
 }
 
-private fun test(){
+private fun test() {
     val executor = Executors.newFixedThreadPool(6)
 
+    var result1 = 0
     val runnable1 = Runnable {
-        var result = 0
-        for (i in 0..10){
-            result++
-            println("r1  thread-name：${Thread.currentThread().name}, result=${result}")
+        for (i in 0..10) {
+            result1++
+            println("r1  thread-name：${Thread.currentThread().name}, result=${result1}")
         }
 
         executor.shutdown()
     }
     executor.execute(runnable1)
 
+    var result2 = 0
     val runnable2 = Runnable {
-        var result = 0
-        for (i in 0..5){
-            result++
-            println("r2  thread-name：${Thread.currentThread().name}, result=${result}")
+        for (i in 0..5) {
+            result2++
+            println("r2  thread-name：${Thread.currentThread().name}, result=${result2}")
         }
 
         executor.shutdown()
     }
     executor.execute(runnable2)
+
+
+    while (true){
+        if (executor.isTerminated) {
+            println("任务执行结束 result1=${result1}, result2=${result2}")
+            break
+        }
+    }
 }
 
 
-
+/**
+ * 常见的阻塞队列
+ * ArrayBlockingQueue ：一个由数组结构组成的有界阻塞队列。
+LinkedBlockingQueue ：一个由链表结构组成的有界阻塞队列。
+PriorityBlockingQueue ：一个支持优先级排序的无界阻塞队列。
+DelayQueue：一个使用优先级队列实现的无界阻塞队列。
+SynchronousQueue：一个不存储元素的阻塞队列。
+LinkedTransferQueue：一个由链表结构组成的无界阻塞队列。
+LinkedBlockingDeque：一个由链表结构组成的双向阻塞队列。
+ */
 
 
 

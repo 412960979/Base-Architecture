@@ -37,7 +37,7 @@ object MyProxy {
                         println("这是动态代理执行的")
 
                         try {
-                            Log.i("test", "damn it!!!")
+                            Log.i("com.example.test", "damn it!!!")
                         } catch (e: RuntimeException) {
                             throw RuntimeException("这个代码只有在Android手机上才能执行")
                         }
@@ -60,7 +60,7 @@ object MyProxy {
                 println("这是动态代理执行的: $b")
 
                 try {
-                    Log.i("test", "damn it!!!")
+                    Log.i("com.example.test", "damn it!!!")
                 } catch (e: RuntimeException) {
                     throw RuntimeException("这个代码只有在Android手机上才能执行")
                 }

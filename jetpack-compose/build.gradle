@@ -15,7 +15,7 @@ android {
         versionCode 1
         versionName "1.0"
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.com.example.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
@@ -52,8 +52,8 @@ dependencies {
     implementation 'com.google.android.material:material:1.2.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     testImplementation 'junit:junit:4.+'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    androidTestImplementation 'androidx.com.example.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.com.example.test.espresso:espresso-core:3.3.0'
 
     implementation 'androidx.compose.ui:ui:1.0.0-alpha03'
     // Tooling support (Previews, etc.)
@@ -69,5 +69,5 @@ dependencies {
     implementation 'androidx.compose.runtime:runtime-livedata:1.0.0-alpha03'
     implementation 'androidx.compose.runtime:runtime-rxjava2:1.0.0-alpha03'
     // UI Tests
-    androidTestImplementation 'androidx.ui:ui-test:1.0.0-alpha03'
+    androidTestImplementation 'androidx.ui:ui-com.example.test:1.0.0-alpha03'
 }
