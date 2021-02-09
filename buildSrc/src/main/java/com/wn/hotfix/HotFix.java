@@ -3,6 +3,10 @@ package com.wn.hotfix;
 import org.gradle.api.Action;
 import org.gradle.api.Plugin;
 import org.gradle.api.Project;
+import org.gradle.api.plugins.ObjectConfigurationAction;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class HotFix implements Plugin<Project> {
 

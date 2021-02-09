@@ -6,6 +6,9 @@ plugins {
     id 'com.wn.version'
 }
 
+Properties properties = new Properties()
+properties.load(project.file('version.properties').newDataInputStream())
+
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.2"
@@ -14,7 +17,7 @@ android {
         applicationId "com.com.example.plugin_hotfix"
         minSdkVersion 21
         targetSdkVersion 30
-        versionCode 1
+        versionCode properties['VERSION_CODE'].toInteger()
         versionName "1.0"
 
         testInstrumentationRunner "androidx.com.example.test.runner.AndroidJUnitRunner"
@@ -71,7 +74,7 @@ afterEvaluate {
                     // 依赖的库会以jar包形式传过来，对依赖库也进行插桩
                     if (filePath.endsWith(".jar")) {
 
-                    } else if (filePath.endsWith(".class")){
+                    } else if (filePath.endsWith(".class")) {
 
                     }
                 }

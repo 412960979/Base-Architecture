@@ -1,3 +1,4 @@
+include 'parcelable'
 include ':com.example.test'
 include ':plugin-hotfix'
 include ':ijkvedio'
