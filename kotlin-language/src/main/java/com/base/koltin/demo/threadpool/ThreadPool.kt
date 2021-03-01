@@ -41,10 +41,10 @@ val rejectHandler = ThreadPoolExecutor.DiscardOldestPolicy()
 fun main() {
 //    testThreadPoolExecute()
 //    testFixThreadPool()
-//    testCachedThreadPool()
+    testCachedThreadPool()
 //    testSingleThreadPool()
 //    testScheduledThreadPool()
-    test()
+//    test()
 }
 
 /**

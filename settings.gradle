@@ -1,3 +1,5 @@
+include ':binder'
+include ':rxjava'
 include 'parcelable'
 include ':com.example.test'
 include ':plugin-hotfix'
