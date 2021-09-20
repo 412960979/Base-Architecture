@@ -1,3 +1,4 @@
+include ':mediacodec'
 include ':binder'
 include ':rxjava'
 include 'parcelable'
@@ -13,3 +14,4 @@ include ':globalstyle'
 include ':app'
 include ':test'
 rootProject.name = "base-architecture"
+include ':design-pattern'
