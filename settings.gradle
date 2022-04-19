@@ -13,3 +13,4 @@ include ':globalstyle'
 include ':app'
 include ':test'
 rootProject.name = "base-architecture"
+include ':navigation'
